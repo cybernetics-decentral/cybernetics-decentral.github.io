@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Protocol | Cybernetics Decentral</title>
+    <meta name="description"
+        content="The official Zero-Trust, Zero-Knowledge Neural & Data Privacy Protocol of Cybernetics Decentral.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Orbitron:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        .content-page {
+            padding-top: 10rem;
+            padding-bottom: 6rem;
+            min-height: 80vh;
+        }
+        .content-card h2 {
+            margin-bottom: 2rem;
+        }
+        .content-card h3 {
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            color: var(--accent-primary);
+        }
+        .content-card p {
+            margin-bottom: 1.25rem;
+            font-size: 1.05rem;
+        }
+        .back-link {
+            margin-top: 3rem;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Dynamic Background Elements -->
+    <div class="bg-grid"></div>
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html#home" class="nav-logo">
+                <img src="assets/images/logo.svg" alt="Cybernetics Decentral Logo" class="logo-icon">
+                <span class="logo-text">CYBERNETICS DECENTRAL</span>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html#identity">Identity</a></li>
+                <li><a href="index.html#vision">Vision</a></li>
+                <li><a href="index.html#pillars">Pillars</a></li>
+                <li><a href="index.html#initiatives">Initiatives</a></li>
+                <li><a href="index.html#what-we-do">What We Do</a></li>
+                <li><a href="index.html#join">Get Involved</a></li>
+            </ul>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="content-page">
+        <div class="container">
+            <article class="glass-card content-card reveal active">
+                <h1 class="text-glow section-title">Neural & Data Privacy Protocol</h1>
+                
+                <p>Cybernetics Decentral operates on a "Zero-Trust, Zero-Knowledge" (ZT/ZK) foundation. This protocol outlines how our designs and open-source infrastructure treat user data.</p>
+                
+                <h3>1. Local-First Processing</h3>
+                <p>All machine learning inference and BCI raw data processing must occur locally on the user's edge hardware. The network serves as an opt-in distribution channel for consensus, not a central repository for user-specific data.</p>
+                
+                <h3>2. Zero-Knowledge Proofs (ZKP)</h3>
+                <p>When interacting with the Open-Grid, nodes use ZKPs to verify network contributions, run computations, and authenticate transactions. This mathematically guarantees that no private inputs, raw text data, or neural signals are ever transmitted or stored on remote nodes.</p>
+                
+                <h3>3. Cognitive Encryption Standards</h3>
+                <p>We advocate for and build standardized cryptographic layers directly at the hardware-software BCI junction. Neural signals are encrypted at the sensor level, ensuring that even if a host OS is compromised, the brain-wave patterns remain undecipherable without physical authorization keys.</p>
+                
+                <h3>4. No Tracking, No Analytics</h3>
+                <p>We run zero analytics engines, cookie tracking, or behavioral profiling tools. This website is hosted on decentralized servers, performs zero logging, and collects only form data that users explicitly choose to encrypt and transmit.</p>
+
+                <a href="index.html" class="btn btn-secondary back-link">&larr; Back to Home</a>
+            </article>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer section">
+        <div class="container">
+            <div class="footer-bottom">
+                <p class="footer-desc">
+                    By combining cutting-edge engineering with a radical commitment to human rights, <strong>CYBERNETICS
+                        DECENTRAL</strong> is building the infrastructure for a free, secure, and sovereign tomorrow.
+                </p>
+                <div class="footer-links">
+                    <span>&copy; 2026 Cybernetics Decentral</span>
+                    <a href="privacy.html">Privacy Protocol</a>
+                    <a href="license.html">Open Source License</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
