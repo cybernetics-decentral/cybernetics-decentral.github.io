@@ -15,6 +15,9 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Orbitron:wght@400;500;700;900&display=swap"
         rel="stylesheet">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -29,16 +32,23 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container nav-content">
-            <a href="#" class="nav-logo">
+            <a href="#home" class="nav-logo">
                 <img src="assets/images/logo.svg" alt="Cybernetics Decentral Logo" class="logo-icon">
                 <span class="logo-text">CYBERNETICS DECENTRAL</span>
             </a>
-            <ul class="nav-links">
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#identity">Identity</a></li>
                 <li><a href="#vision">Vision</a></li>
                 <li><a href="#pillars">Pillars</a></li>
                 <li><a href="#initiatives">Initiatives</a></li>
+                <li><a href="#what-we-do">What We Do</a></li>
+                <li><a href="#join">Get Involved</a></li>
             </ul>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
         </div>
     </nav>
 
@@ -205,33 +215,92 @@
         </div>
     </section>
 
-    <!-- What We Do Section -->
-    <section id="what-we-do" class="section">
+    <!-- Get Involved Section -->
+    <section id="join" class="section">
         <div class="container reveal">
-            <h2 class="section-title">What We Do</h2>
-            <p class="section-desc">CYBERNETICS DECENTRAL operates as a research institute, a developer of open-source
-                tools, and a philanthropic funder.</p>
+            <h2 class="section-title text-center">Get Involved</h2>
+            <p class="section-desc text-center" style="margin: 0 auto 3rem auto;">
+                We are building a future of cognitive freedom. Join our decentralized network, subscribe to updates, or reach out to our core team.
+            </p>
 
-            <div class="grid-2 mt-4">
-                <div class="glass-card feature-card">
-                    <h4>Distributed Governance Systems</h4>
-                    <p>Building the infrastructure for transparent, democratic decision-making at scale using blockchain
-                        and swarm intelligence models.</p>
+            <div class="grid-2">
+                <!-- Forms Left Panel -->
+                <div class="glass-card forms-panel">
+                    <div class="form-group-wrapper">
+                        <h3>1. Subscribe to the Neural Dispatch</h3>
+                        <p>Get bi-weekly updates on cognitive sovereignty, open-source neural hardware, and cryptography standards.</p>
+                        <form id="newsletter-form" class="interactive-form">
+                            <div class="input-group">
+                                <input type="email" id="newsletter-email" placeholder="Enter your secure email..." required>
+                                <button type="submit" class="btn btn-primary">Subscribe</button>
+                            </div>
+                            <div id="newsletter-success" class="form-feedback hidden">
+                                <svg class="check-icon" viewBox="0 0 24 24" width="24" height="24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="#00f0ff"/></svg>
+                                <span>Subscription protocol established! Welcome.</span>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="form-group-wrapper mt-4">
+                        <h3>2. Message the Core Team</h3>
+                        <p>Inquiries about research, funding opportunities, or collaborative advocacy are welcome.</p>
+                        <form id="contact-form" class="interactive-form">
+                            <div class="input-field">
+                                <input type="text" id="contact-name" placeholder="Name or Cryptographic Handle" required>
+                            </div>
+                            <div class="input-field">
+                                <input type="email" id="contact-email" placeholder="Email (optional / for response)" required>
+                            </div>
+                            <div class="input-field">
+                                <textarea id="contact-message" placeholder="Your encrypted transmission..." rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-secondary">Transmit Message</button>
+                            <div id="contact-success" class="form-feedback hidden">
+                                <svg class="check-icon" viewBox="0 0 24 24" width="24" height="24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="#00f0ff"/></svg>
+                                <span>Transmission sent and encrypted successfully.</span>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                <div class="glass-card feature-card">
-                    <h4>Human-Machine Augmentation</h4>
-                    <p>Funding and conducting research into non-invasive neural interfaces that are affordable, open,
-                        and secure.</p>
-                </div>
-                <div class="glass-card feature-card">
-                    <h4>Ethical AI Development</h4>
-                    <p>Creating frameworks and public-good AI models that are inherently unbiased, explainable, and
-                        accountable.</p>
-                </div>
-                <div class="glass-card feature-card">
-                    <h4>Network Literacy & Accessibility</h4>
-                    <p>Ensuring that the benefits of the digital revolution are accessible to everyone, everywhere,
-                        removing central barriers.</p>
+
+                <!-- Grid Registration Console Right Panel -->
+                <div class="glass-card console-panel">
+                    <h3>3. Register a Neural Grid Node</h3>
+                    <p>Contribute compute power to the <strong>Open-Grid Project</strong> and support decentralized AI model hosting. Run a simulation of the registration process below.</p>
+                    
+                    <form id="node-form" class="node-form-layout">
+                        <div class="input-field">
+                            <label for="node-name">Node Identifier</label>
+                            <input type="text" id="node-name" placeholder="e.g. AURORA-09" required>
+                        </div>
+                        <div class="grid-2-form">
+                            <div class="input-field">
+                                <label for="node-location">Geographic Anchor</label>
+                                <input type="text" id="node-location" placeholder="e.g. Reykjavik, IS" required>
+                            </div>
+                            <div class="input-field">
+                                <label for="node-tier">Capacity Allocation</label>
+                                <select id="node-tier">
+                                    <option value="edge">Edge Client (16-32 GB VRAM)</option>
+                                    <option value="hub">Hub Node (64-128 GB VRAM)</option>
+                                    <option value="supernode">Supernode Cluster (512+ GB VRAM)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" id="node-btn" class="btn btn-primary w-full">Initiate Grid Connection</button>
+                    </form>
+
+                    <div class="terminal-container mt-4">
+                        <div class="terminal-header">
+                            <span class="terminal-dot red"></span>
+                            <span class="terminal-dot yellow"></span>
+                            <span class="terminal-dot green"></span>
+                            <span class="terminal-title">grid-registration-daemon</span>
+                        </div>
+                        <div class="terminal-body" id="terminal-output">
+                            <p class="term-dim">// Waiting for grid connection inputs...</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -246,6 +315,9 @@
                     the collective mind of a free humanity."
                 </blockquote>
                 <cite>— The Cybernetics Decentral Manifesto</cite>
+                <div style="margin-top: 2rem; text-align: center;">
+                    <button id="open-manifesto" class="btn btn-secondary">Read the Full Manifesto</button>
+                </div>
             </div>
 
             <div class="footer-bottom">
@@ -257,12 +329,110 @@
                 </p>
                 <div class="footer-links">
                     <span>&copy; 2026 Cybernetics Decentral</span>
-                    <a href="#">Privacy Protocol</a>
-                    <a href="#">Open Source License</a>
+                    <a href="#" id="open-privacy">Privacy Protocol</a>
+                    <a href="#" id="open-license">Open Source License</a>
                 </div>
             </div>
         </div>
     </footer>
+
+    <!-- Modals Layer -->
+    <!-- Manifesto Modal -->
+    <div id="manifesto-modal" class="modal-backdrop">
+        <div class="modal-content glass-card">
+            <button class="modal-close" id="close-manifesto" aria-label="Close Modal">&times;</button>
+            <h2 class="text-glow">The Cybernetics Decentral Manifesto</h2>
+            <div class="modal-scroll-area">
+                <h3>Preamble: The Fork in the Path</h3>
+                <p>Humankind stands at the threshold of the most profound evolutionary leap in history: the integration of cognitive biology with distributed computer intelligence. We are designing the digital nervous systems of tomorrow. Yet, we face a critical bifurcation. Will these technologies serve as instruments of ultimate centralization, allowing a handful of corporations and state actors to monitor, curate, and command our very thoughts? Or will they be structured as peer-to-peer networks that extend human cognitive agency, protect individual sovereignty, and liberate collective intelligence?</p>
+                
+                <h3>I. Cognitive Autonomy & Neural Sovereignty</h3>
+                <p>Your mind is the absolute sanctuary of your identity. We assert that every biological entity has the inalienable right to complete neural sovereignty. Any brain-computer interface (BCI) or cognitive enhancement tool must serve solely as an extension of the user. We reject any standard, protocol, or business model that allows cognitive surveillance, data harvesting from neural signals, or direct intervention in human thoughts without absolute, localized user control. The interface is yours; the thoughts are yours; the sovereignty is yours.</p>
+
+                <h3>II. The Fallacy of Centralization</h3>
+                <p>Centralized platforms are inherently prone to systematic censorship, monocultures of thought, and systemic vulnerability. Placing the collective intelligence of humanity inside corporate server farms creates single points of failure. Cybernetics Decentral advocates for distributed structures: neural grids where nodes are hosted by thousands of citizens worldwide. If the grid is everywhere, it cannot be turned off. If the nodes are sovereign, the network cannot be coerced.</p>
+
+                <h3>III. Zero-Knowledge Cryptography as a Shield</h3>
+                <p>In a world of total digital monitoring, trust is a liability. We replace trust with mathematical proof. We design zero-knowledge protocols that allow data to be verified without being exposed. Your private models, your identity, and your neural parameters are protected by mathematics. You interact with the grid, you utilize collective resources, but you remain invisible to external surveillance.</p>
+
+                <h3>IV. The Call to the Grid</h3>
+                <p>We do not request permission from central institutions; we build the alternative. By registering nodes, establishing open BCI protocols, and adopting zero-knowledge technologies, we are wiring the infrastructure of a free, sovereign tomorrow. The future of intelligence will not be centralized in a server farm; it will be distributed across the collective mind of a free humanity. Join us. Establish your node. Secure your thoughts.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary close-modal-btn">Acknowledge Manifesto</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Privacy Protocol Modal -->
+    <div id="privacy-modal" class="modal-backdrop">
+        <div class="modal-content glass-card">
+            <button class="modal-close" id="close-privacy" aria-label="Close Modal">&times;</button>
+            <h2 class="text-glow">Neural & Data Privacy Protocol</h2>
+            <div class="modal-scroll-area">
+                <p>Cybernetics Decentral operates on a "Zero-Trust, Zero-Knowledge" (ZT/ZK) foundation. This protocol outlines how our designs and open-source infrastructure treat user data.</p>
+                
+                <h3>1. Local-First Processing</h3>
+                <p>All machine learning inference and BCI raw data processing must occur locally on the user's edge hardware. The network serves as an opt-in distribution channel for consensus, not a central repository for user-specific data.</p>
+                
+                <h3>2. Zero-Knowledge Proofs (ZKP)</h3>
+                <p>When interacting with the Open-Grid, nodes use ZKPs to verify network contributions, run computations, and authenticate transactions. This mathematically guarantees that no private inputs, raw text data, or neural signals are ever transmitted or stored on remote nodes.</p>
+                
+                <h3>3. Cognitive Encryption Standards</h3>
+                <p>We advocate for and build standardized cryptographic layers directly at the hardware-software BCI junction. Neural signals are encrypted at the sensor level, ensuring that even if a host OS is compromised, the brain-wave patterns remain undecipherable without physical authorization keys.</p>
+                
+                <h3>4. No Tracking, No Analytics</h3>
+                <p>We run zero analytics engines, cookie tracking, or behavioral profiling tools. This website is hosted on decentralized servers, performs zero logging, and collects only form data that users explicitly choose to encrypt and transmit.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary close-modal-btn">Close Protocol</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Open Source License Modal -->
+    <div id="license-modal" class="modal-backdrop">
+        <div class="modal-content glass-card">
+            <button class="modal-close" id="close-license" aria-label="Close Modal">&times;</button>
+            <h2 class="text-glow">Open Source License</h2>
+            <div class="modal-scroll-area">
+                <p>All software developed under the Cybernetics Decentral foundation is released under the BSD 3-Clause License. This allows maximum utility, auditing, and integration into both public and private systems, ensuring code remains accessible for review.</p>
+                <pre class="license-pre">
+BSD 3-Clause License
+
+Copyright (c) 2026, Cybernetics Decentral 
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its
+   contributors may be used to endorse or promote products derived from
+   this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+                </pre>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary close-modal-btn">Close License</button>
+            </div>
+        </div>
+    </div>
 
     <!-- Scripts -->
     <script src="assets/js/app.js"></script>
