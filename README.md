@@ -18,7 +18,7 @@ We envision a future where cognitive augmentation and artificial intelligence se
 
 ### Repository Structure
 - `index.html`: The main landing page.
-- `license.html`: Licensing information.
+- `LICENSE.md`: Licensing information.
 - `privacy.html`: Privacy policy.
 - `assets/`: Contains CSS, JavaScript, and image assets.
 
